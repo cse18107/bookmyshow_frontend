@@ -54,16 +54,14 @@ const Header = () => {
       >
         {/* code */}
       </div>
-      <div className="backdrop"  style={{ display: `${showOverlay ? "block" : "none"}` }}></div>
-      <div className={`model ${
-              showOverlay ? "model-open" : "model-close"
-            }`}>
-            <p
-              style={{ cursor: "pointer" }}
-              onClick={() => setShowOverlay(false)}
-            >
-              close
-            </p>
+      <div
+        className="backdrop"
+        style={{ display: `${showOverlay ? "block" : "none"}` }}
+      ></div>
+      <div className={`model ${showOverlay ? "model-open" : "model-close"}`}>
+        <p style={{ cursor: "pointer" }} onClick={() => setShowOverlay(false)}>
+          close
+        </p>
       </div>
     </div>
   );
