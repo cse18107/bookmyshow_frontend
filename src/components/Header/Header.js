@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import search from "../../images/search.png";
 import logo from "../../images/bookmyshow.jpg";
+import cross from "../../images/close.png"
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -59,9 +60,12 @@ const Header = () => {
         style={{ display: `${showOverlay ? "block" : "none"}` }}
       ></div>
       <div className={`model ${showOverlay ? "model-open" : "model-close"}`}>
-        <p style={{ cursor: "pointer" }} onClick={() => setShowOverlay(false)}>
-          close
-        </p>
+          <div className="model-top">
+            <div></div>
+            <div className="model-heading"><p>Get Started</p></div>
+            <div className="model-cross"><img src={cross} alt='close' onClick={()=>setShowOverlay(false)} /></div>
+          </div>
+          <div className="model-lower"></div>
       </div>
     </div>
   );
